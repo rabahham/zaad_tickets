@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:zaad_tickets/screens/selected-gate.dart';
 import 'package:zaad_tickets/shard/components/components.dart';
 import 'package:zaad_tickets/shard/style/colors.dart';
 
@@ -87,7 +88,7 @@ class HomeScreens extends StatelessWidget {
               bottom: -25,
               child: Center(
                 child: Container(
-                  width: 410,
+                  width: double.infinity,
                   height: 55,
                   color: Colors.transparent,
                   padding: EdgeInsets.symmetric(horizontal: 30),
@@ -107,26 +108,29 @@ class HomeScreens extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 25),
           child: Row(
             children: [
+              SizedBox(
+                width: 15,
+              ),
               iconCrecolarText(
                   text: 'Boats',
                   urlImage: 'asset/images/icon_Steamship.png',
                   color: HexColor('#3C8080')),
               SizedBox(
-                width: 18,
+                width: 15,
               ),
               iconCrecolarText(
                   text: 'Flights',
                   urlImage: 'asset/images/icon_fly.png',
                   color: HexColor('##D5D5D5')),
               SizedBox(
-                width: 18,
+                width: 15,
               ),
               iconCrecolarText(
                   text: 'Stays',
                   urlImage: 'asset/images/Group.png',
                   color: HexColor('##D5D5D5')),
               SizedBox(
-                width: 18,
+                width: 15,
               ),
               iconCrecolarText(
                 text: 'Taxis',
@@ -164,18 +168,27 @@ class HomeScreens extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 30.0),
-          child: Row(children: [
-            // ListView.separated(
-            //   itemBuilder: cardsVille(),
-            //    separatorBuilder: SizedBox(width: 10,),
-            //     itemCount: 10),
-          ]),
-        ),
+        Container(
+            padding: const EdgeInsets.only(left: 30.0),
+            height: 200,
+            child: ListView.separated(
+              itemBuilder: ((context, index) => cardsVille()),
+              separatorBuilder: ((context, index) => SizedBox(
+                    width: 20,
+                  )),
+              itemCount: 10,
+              scrollDirection: Axis.horizontal,
+            )),
         Spacer(),
         defultButton(
-            function: () {}, text: 'Let\'s Start', background: SecndColors),
+            function: () {
+              navigatToRomplace(
+                context,
+                SelectedGate(),
+              );
+            },
+            text: 'Let\'s Start',
+            background: SecndColors),
         SizedBox(
           height: 20,
         ),

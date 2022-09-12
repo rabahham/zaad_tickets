@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zaad_tickets/screens/home_screen.dart';
 
 import 'package:zaad_tickets/screens/loding_screen.dart';
+import 'package:zaad_tickets/screens/selected-gate.dart';
 import 'package:zaad_tickets/shard/style/colors.dart';
 
 void main() {

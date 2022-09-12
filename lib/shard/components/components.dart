@@ -288,8 +288,8 @@ Widget iconCrecolarText({
     Column(
       children: [
         Container(
-          width: 75,
-          height: 75,
+          width: 72,
+          height: 70,
           decoration: BoxDecoration(
             // color: HexColor('#3C8080'),
             color: color,
@@ -381,4 +381,50 @@ Widget cardsVille() => Container(
           )
         ],
       ),
+    );
+
+Widget selectGates({
+  // Color colorr = selectedIcon,
+
+  String? text,
+}) =>
+    Container(
+      padding: EdgeInsets.all(10),
+      height: 80,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Row(children: [
+        Container(
+          child: Image.asset(
+            'asset/images/icon_velected.png',
+            fit: BoxFit.none,
+            // color: colorr,
+          ),
+        ),
+        SizedBox(
+          width: 20,
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'ALG - MLS',
+              style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: HexColor('#6AAAD8')),
+            ),
+            Text(
+              ' Alger Center - Marsille',
+              style: TextStyle(
+                  fontSize: 19,
+                  fontWeight: FontWeight.w400,
+                  color: HexColor('#C0C0C0')),
+            )
+          ],
+        )
+      ]),
     );

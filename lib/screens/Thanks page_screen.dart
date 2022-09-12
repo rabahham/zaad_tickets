@@ -85,7 +85,6 @@ class Thanks_screen extends StatelessWidget {
                               fontSize: 30,
                               fontWeight: FontWeight.w500),
                         ),
-                        
                         Text(
                           'Happy Trip',
                           style: TextStyle(
@@ -99,6 +98,7 @@ class Thanks_screen extends StatelessWidget {
                       ],
                     )),
                   ),
+                  // Spacer(),
                   defultButton(
                       function: () {
                         // _formKey.currentState!.validate();

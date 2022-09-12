@@ -19,3 +19,4 @@ Map<int, Color> color = {
 MaterialColor frestColors = MaterialColor(0xFF3E8A85, color);
 Color SecndColors = HexColor('#3C8080');
 Color GeryColor = HexColor('#E1E1E1');
+Color selectedIcon = HexColor('#FF821E');

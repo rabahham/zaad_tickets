@@ -121,6 +121,101 @@ Widget textField({
               borderSide: BorderSide(color: Colors.white)),
         ));
 
+Widget textFieldSuFixIcon({
+  required TextEditingController controller,
+  required String hintText,
+  TextInputType keyboardType = TextInputType.text,
+  bool autofocus = false,
+  double borderRadius = 40,
+  int maxlines = 1,
+  required String urlIcon,
+}) =>
+    TextFormField(
+        maxLines: maxlines,
+        controller: controller,
+        keyboardType: keyboardType,
+        cursorColor: Colors.black,
+        validator: (value) {
+          if (value!.isEmpty) {
+            return ("$hintText must not be  empty");
+          }
+
+          return null;
+        },
+        onSaved: (value) {
+          controller.text = value!;
+        },
+
+        // textInputAction: TextInputAction.done,
+        decoration: InputDecoration(
+          hoverColor: Colors.black,
+          suffixIcon: ImageIcon(AssetImage(urlIcon)),
+          filled: true,
+          fillColor: Colors.white,
+
+          // contentPadding: EdgeInsets.all(0),
+          contentPadding: EdgeInsets.fromLTRB(20, 0, 20, 10),
+
+          hintText: hintText,
+          hintStyle: TextStyle(color: Colors.grey, fontSize: 28),
+          disabledBorder: InputBorder.none,
+          border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(borderRadius),
+              borderSide: BorderSide(color: Colors.white)),
+        ));
+
+Widget textFieldSuFixSearch({
+  required TextEditingController controller,
+  required String hintText,
+  TextInputType keyboardType = TextInputType.text,
+  bool autofocus = false,
+  double borderRadius = 40,
+  int maxlines = 1,
+  required String urlIcon,
+}) =>
+    SizedBox(
+      height: 50,
+      // color: Colors.red,
+      child: TextFormField(
+          maxLines: maxlines,
+          controller: controller,
+          keyboardType: keyboardType,
+          cursorColor: Colors.black,
+          validator: (value) {
+            if (value!.isEmpty) {
+              return ("$hintText must not be  empty");
+            }
+
+            return null;
+          },
+          onSaved: (value) {
+            controller.text = value!;
+          },
+
+          // textInputAction: TextInputAction.done,
+          decoration: InputDecoration(
+            hoverColor: Colors.black,
+            suffixIcon: Padding(
+              padding: const EdgeInsets.only(right: 5, bottom: 5, top: 5),
+              child: iconCercular(
+                  urlImage: urlIcon, color: frestColor, height: 50, width: 4),
+            ),
+            filled: true,
+            fillColor: GeryColor,
+
+            // contentPadding: EdgeInsets.all(0),
+            contentPadding: EdgeInsets.only(bottom: 30, left: 20),
+
+            hintText: hintText,
+            hintStyle:
+                TextStyle(color: Colors.black45, fontSize: 28, height: 2.2),
+            disabledBorder: InputBorder.none,
+            border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(borderRadius),
+                borderSide: BorderSide(color: Colors.white)),
+          )),
+    );
+
 Widget passWordField({
   required TextEditingController controller,
   required String hintText,
@@ -184,3 +279,106 @@ void navigatToRomplace(context, widget) => Navigator.pushAndRemoveUntil(
         ), (route) {
       return false;
     });
+
+Widget iconCrecolarText({
+  required urlImage,
+  Color color = Colors.white,
+  required String text,
+}) =>
+    Column(
+      children: [
+        Container(
+          width: 75,
+          height: 75,
+          decoration: BoxDecoration(
+            // color: HexColor('#3C8080'),
+            color: color,
+            borderRadius: BorderRadius.circular(100),
+          ),
+          child: Image.asset(
+            urlImage,
+            fit: BoxFit.none,
+          ),
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        Text(
+          text,
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+        )
+      ],
+    );
+
+Widget iconCercular({
+  required urlImage,
+  Color color = Colors.white,
+  double width = 30,
+  double height = 30,
+}) =>
+    Container(
+      width: width,
+      height: height,
+      decoration: BoxDecoration(
+        // color: HexColor('#3C8080'),
+        color: color,
+        borderRadius: BorderRadius.circular(100),
+      ),
+      child: Image.asset(
+        urlImage,
+        fit: BoxFit.none,
+      ),
+    );
+
+Widget cardsVille() => Container(
+      width: 200,
+      height: 200,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        image: DecorationImage(
+          image: AssetImage('asset/images/marseille.png'),
+          fit: BoxFit.cover,
+        ),
+      ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                child: Text(
+                  'Marseille',
+                  style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.normal,
+                      color: Colors.white),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 105,
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: 130,
+              ),
+              Container(
+                width: 50,
+                height: 20,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: ImageIcon(
+                  AssetImage('asset/images/icon_calender.png'),
+                  color: SecndColors,
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
+    );

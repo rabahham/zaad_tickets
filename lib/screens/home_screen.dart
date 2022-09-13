@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:zaad_tickets/screens/book_page.dart';
 import 'package:zaad_tickets/screens/selected-gate.dart';
 import 'package:zaad_tickets/shard/components/components.dart';
 import 'package:zaad_tickets/shard/style/colors.dart';
@@ -108,34 +109,30 @@ class HomeScreens extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 25),
           child: Row(
             children: [
-              SizedBox(
-                width: 15,
+              Expanded(
+                child: iconCrecolarText(
+                    text: 'Boats',
+                    urlImage: 'asset/images/icon_Steamship.png',
+                    color: HexColor('#3C8080')),
               ),
-              iconCrecolarText(
-                  text: 'Boats',
-                  urlImage: 'asset/images/icon_Steamship.png',
-                  color: HexColor('#3C8080')),
-              SizedBox(
-                width: 15,
+              Expanded(
+                child: iconCrecolarText(
+                    text: 'Flights',
+                    urlImage: 'asset/images/icon_fly.png',
+                    color: HexColor('##D5D5D5')),
               ),
-              iconCrecolarText(
-                  text: 'Flights',
-                  urlImage: 'asset/images/icon_fly.png',
-                  color: HexColor('##D5D5D5')),
-              SizedBox(
-                width: 15,
+              Expanded(
+                child: iconCrecolarText(
+                    text: 'Stays',
+                    urlImage: 'asset/images/Group.png',
+                    color: HexColor('##D5D5D5')),
               ),
-              iconCrecolarText(
-                  text: 'Stays',
-                  urlImage: 'asset/images/Group.png',
-                  color: HexColor('##D5D5D5')),
-              SizedBox(
-                width: 15,
-              ),
-              iconCrecolarText(
-                text: 'Taxis',
-                urlImage: 'asset/images/Vector-car.png',
-                color: HexColor('##D5D5D5'),
+              Expanded(
+                child: iconCrecolarText(
+                  text: 'Taxis',
+                  urlImage: 'asset/images/Vector-car.png',
+                  color: HexColor('##D5D5D5'),
+                ),
               ),
             ],
           ),
@@ -182,9 +179,9 @@ class HomeScreens extends StatelessWidget {
         Spacer(),
         defultButton(
             function: () {
-              navigatToRomplace(
+              navigatTo(
                 context,
-                SelectedGate(),
+                Book_Screen(),
               );
             },
             text: 'Let\'s Start',

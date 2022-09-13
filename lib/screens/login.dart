@@ -74,10 +74,11 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    emailField(
+                    textField(
                         controller: passwordController,
                         hintText: 'Username',
-                        urlIcon: 'asset/images/Vector.png'),
+                        urlIcon: 'asset/images/Vector.png',
+                        keyboardType: TextInputType.text),
                     SizedBox(
                       height: 20,
                     ),

@@ -27,7 +27,7 @@ class SelectedGate extends StatelessWidget {
               padding: const EdgeInsets.all(20.0),
               child: Column(
                 children: [
-                  SizedBox(height: 50),
+                  SizedBox(height: 40),
                   Center(
                     child: Text(
                       'Select Gate',
@@ -41,36 +41,111 @@ class SelectedGate extends StatelessWidget {
                     height: 30,
                   ),
                   Container(
-                    height: 500,
+                    height: 520,
                     width: double.infinity,
+                    padding: EdgeInsets.symmetric(horizontal: 10),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                color: Colors.red,
-                                borderRadius: BorderRadius.circular(10),
+                    child: Padding(
+                      padding: const EdgeInsets.all(25.0),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              classCheck(),
+                              classCheck(),
+                              SizedBox(
+                                width: 25,
                               ),
-                              child: Center(
-                                child: Text(
-                                  'A1',
-                                  style: TextStyle(
-                                      fontSize: 34,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.white),
-                                ),
+                              classCheck(),
+                              classCheck(),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              classCheck(),
+                              classCheck(),
+                              SizedBox(
+                                width: 25,
                               ),
-                            )
-                          ],
-                        ),
-                      ],
+                              classCheck(),
+                              classCheck(),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              classCheck(),
+                              classCheck(),
+                              SizedBox(
+                                width: 25,
+                              ),
+                              classCheck(),
+                              classCheck(),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              classCheck(),
+                              classCheck(),
+                              SizedBox(
+                                width: 25,
+                              ),
+                              classCheck(),
+                              classCheck(),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              classCheck(),
+                              classCheck(),
+                              SizedBox(
+                                width: 25,
+                              ),
+                              classCheck(),
+                              classCheck(),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              classCheck(),
+                              classCheck(),
+                              SizedBox(
+                                width: 25,
+                              ),
+                              classCheck(),
+                              classCheck(),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              classCheck(),
+                              classCheck(),
+                              SizedBox(
+                                width: 25,
+                              ),
+                              classCheck(),
+                              classCheck(),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 18,
+                          ),
+                          Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 55.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                classChecCustum(),
+                                classChecCustum(),
+                                classChecCustum(),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   )
                 ],

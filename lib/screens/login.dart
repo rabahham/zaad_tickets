@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:zaad_tickets/screens/home_screen.dart';
 import 'package:zaad_tickets/screens/sing_up_screen.dart';
@@ -59,16 +60,13 @@ class LoginScreen extends StatelessWidget {
                     ),
                     Center(
                       child: Container(
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 35.0, right: 50),
-                          child: Text(
-                            'Welcome',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 50,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ),
+                        child: Text('Welcome',
+                            style: GoogleFonts.montserrat(
+                              textStyle: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 50,
+                                  fontWeight: FontWeight.w500),
+                            )),
                       ),
                     ),
                     SizedBox(
@@ -114,19 +112,19 @@ class LoginScreen extends StatelessWidget {
                         text: 'Log In',
                         background: HexColor('#3E8A85')),
                     SizedBox(
-                      height: 5,
+                      height: 10,
                     ),
                     Center(
-                      child: Text(
-                        'Forgot your password ?',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500),
-                      ),
+                      child: Text('Forgot your password ?',
+                          style: GoogleFonts.montserrat(
+                            textStyle: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500),
+                          )),
                     ),
                     SizedBox(
-                      height: 15,
+                      height: 10,
                     ),
                     defultButton(
                         function: () {

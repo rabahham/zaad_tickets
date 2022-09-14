@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:zaad_tickets/shard/components/components.dart';
 import 'package:zaad_tickets/shard/style/colors.dart';
@@ -18,7 +19,7 @@ class Book_Screen extends StatelessWidget {
       height: double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('asset/images/Loding_Page_1.png'),
+          image: AssetImage('asset/images/Loding_Page_k.png'),
           fit: BoxFit.cover,
         ),
       ),
@@ -41,13 +42,11 @@ class Book_Screen extends StatelessWidget {
                       SizedBox(
                         height: 20,
                       ),
-                      Text(
-                        ' Let’s Book YourTrip',
-                        style: TextStyle(
-                            fontSize: 34,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500),
-                      ),
+                      textMots(
+                          text: 'Let’s Book YourTrip',
+                          size: 32,
+                          fontwight: FontWeight.w500),
+
                       // Text(
                       //   ' YourTrip',
                       //   style: TextStyle(
@@ -106,21 +105,39 @@ class Book_Screen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(25.0)),
                           labelColor: Colors.white,
                           unselectedLabelColor: HexColor('#616161'),
-                          tabs: const [
+                          tabs: [
+                            //   textMots(
+                            // text: 'One Way',
+                            // size: 16,
+                            // fontwight: FontWeight.w500),
+                            // textMots(
+                            // text: 'Round Trip',
+                            // size: 16,
+                            // fontwight: FontWeight.w500),
+                            // textMots(
+                            // text: 'Multi-City',
+                            // size: 32,
+                            // fontwight: FontWeight.w500),
                             Text(
                               'One Way',
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.w500),
+                              style: GoogleFonts.montserrat(
+                                textStyle: TextStyle(
+                                    fontSize: 14, fontWeight: FontWeight.w500),
+                              ),
                             ),
                             Text(
                               'Round Trip',
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.w500),
+                              style: GoogleFonts.montserrat(
+                                textStyle: TextStyle(
+                                    fontSize: 14, fontWeight: FontWeight.w500),
+                              ),
                             ),
                             Text(
                               'Multi-City',
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.w500),
+                              style: GoogleFonts.montserrat(
+                                textStyle: TextStyle(
+                                    fontSize: 14, fontWeight: FontWeight.w500),
+                              ),
                             ),
                           ],
                         ),
@@ -174,25 +191,21 @@ class Book_Screen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 25),
               child: Row(
                 children: [
-                  Text(
-                    ' Sort By ',
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: HexColor('#B3B2B4'),
-                        fontWeight: FontWeight.w500),
-                  ),
+                  textMots(
+                      text: ' Sort By ',
+                      size: 20,
+                      color: HexColor('#B3B2B4'),
+                      fontwight: FontWeight.w500),
                   SizedBox(
                     width: 5,
                   ),
                   Row(
                     children: [
-                      Text(
-                        ' Highest Price',
-                        style: TextStyle(
-                            fontSize: 16,
-                            color: HexColor('#1A1A1A'),
-                            fontWeight: FontWeight.bold),
-                      ),
+                      textMots(
+                          text: ' Highest Price',
+                          size: 16,
+                          color: HexColor('#1A1A1A'),
+                          fontwight: FontWeight.w500),
                       Icon(
                         Icons.keyboard_arrow_down,
                         color: SecndColors,

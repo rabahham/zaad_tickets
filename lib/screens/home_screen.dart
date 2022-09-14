@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:zaad_tickets/screens/book_page.dart';
 import 'package:zaad_tickets/screens/selected-gate.dart';
@@ -42,25 +43,15 @@ class HomeScreens extends StatelessWidget {
                             SizedBox(
                               height: 40,
                             ),
-                            Text(
-                              'Hello Mohammed',
-                              style: TextStyle(
-                                  fontSize: 22.55, color: Colors.white),
-                            ),
-                            Text(
-                              ' Find Your',
-                              style: TextStyle(
-                                  fontSize: 42,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              ' Trip',
-                              style: TextStyle(
-                                  fontSize: 42,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            ),
+                            textMots(
+                                text: 'Hello Mohammed',
+                                size: 22,
+                                fontwight: FontWeight.normal),
+                            textMots(
+                                text: ' Find Your',
+                                size: 42,
+                                fontwight: FontWeight.bold),
+                            textMots(text: ' Trip', size: 42),
                           ],
                         ),
                         SizedBox(
@@ -99,7 +90,7 @@ class HomeScreens extends StatelessWidget {
                     children: [
                       Container(
                         width: double.infinity,
-                        height: 55,
+                        height: 50,
                         color: Colors.transparent,
                         padding: EdgeInsets.symmetric(horizontal: 30),
                         child: textFieldSuFixSearch(
@@ -157,18 +148,17 @@ class HomeScreens extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Row(
               children: [
-                Text(
-                  'Most Visited',
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
-                ),
+                textMots(
+                    text: 'Most Visited',
+                    size: 30,
+                    fontwight: FontWeight.w500,
+                    color: Colors.black),
                 Spacer(),
-                Text(
-                  'View All',
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.normal,
-                      color: SecndColors),
-                ),
+                textMots(
+                    text: 'View All',
+                    size: 16,
+                    fontwight: FontWeight.normal,
+                    color: SecndColors),
                 SizedBox(
                   width: 20,
                 )
@@ -209,8 +199,6 @@ class HomeScreens extends StatelessWidget {
               ),
             ],
           ),
-        
-        
         ],
       ),
     ));

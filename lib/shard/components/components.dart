@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:zaad_tickets/screens/Payment_screen.dart';
 
@@ -23,12 +24,14 @@ Widget defultButton({
           // minWidth: MediaQuery.of(context).size.width,
           minWidth: minWidth,
           onPressed: function,
-          child: Text(
-            text,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                fontSize: 22, color: colorText, fontWeight: FontWeight.w500),
-          )),
+          child: Text(text,
+              textAlign: TextAlign.center,
+              style: GoogleFonts.montserrat(
+                textStyle: TextStyle(
+                    fontSize: 22,
+                    color: colorText,
+                    fontWeight: FontWeight.w500),
+              ))),
     );
 
 Widget emailField({
@@ -71,7 +74,11 @@ Widget emailField({
           // contentPadding: EdgeInsets.fromLTRB(20, 20, 20, 10),
 
           hintText: hintText,
-          hintStyle: TextStyle(color: Colors.grey, fontSize: 28),
+          hintStyle: TextStyle(
+            color: Colors.grey,
+            fontSize: 28,
+            fontFamily: 'Gilroy',
+          ),
           disabledBorder: InputBorder.none,
           border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(borderRadius),
@@ -119,7 +126,11 @@ Widget textField({
           // contentPadding: EdgeInsets.fromLTRB(20, 20, 20, 10),
 
           hintText: hintText,
-          hintStyle: TextStyle(color: Colors.grey, fontSize: 28),
+          hintStyle: TextStyle(
+            color: Colors.grey,
+            fontSize: 28,
+            fontFamily: 'Gilroy',
+          ),
           disabledBorder: InputBorder.none,
           border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(borderRadius),
@@ -171,7 +182,8 @@ Widget textFieldFromTo({
           contentPadding: EdgeInsets.only(top: 20, left: 40),
 
           hintText: hintText,
-          hintStyle: TextStyle(color: Colors.grey, fontSize: 18),
+          hintStyle:
+              TextStyle(color: Colors.grey, fontSize: 18, fontFamily: 'Gilroy'),
           disabledBorder: InputBorder.none,
           border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(borderRadius),
@@ -214,7 +226,11 @@ Widget textFieldSuFixIcon({
           contentPadding: EdgeInsets.fromLTRB(20, 0, 20, 10),
 
           hintText: hintText,
-          hintStyle: TextStyle(color: Colors.grey, fontSize: 28),
+          hintStyle: TextStyle(
+            color: Colors.grey,
+            fontSize: 28,
+            fontFamily: 'Gilroy',
+          ),
           disabledBorder: InputBorder.none,
           border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(borderRadius),
@@ -230,48 +246,49 @@ Widget textFieldSuFixSearch({
   int maxlines = 1,
   required String urlIcon,
 }) =>
-    SizedBox(
-      height: 50,
-      // color: Colors.red,
-      child: TextFormField(
-          maxLines: maxlines,
-          controller: controller,
-          keyboardType: keyboardType,
-          cursorColor: Colors.black,
-          validator: (value) {
-            if (value!.isEmpty) {
-              return ("$hintText must not be  empty");
-            }
+    TextFormField(
+        maxLines: maxlines,
+        controller: controller,
+        keyboardType: keyboardType,
+        cursorColor: Colors.black,
+        validator: (value) {
+          if (value!.isEmpty) {
+            return ("$hintText must not be  empty");
+          }
 
-            return null;
-          },
-          onSaved: (value) {
-            controller.text = value!;
-          },
+          return null;
+        },
+        onSaved: (value) {
+          controller.text = value!;
+        },
 
-          // textInputAction: TextInputAction.done,
-          decoration: InputDecoration(
-            hoverColor: Colors.black,
-            suffixIcon: Padding(
-              padding: const EdgeInsets.only(right: 5, bottom: 5, top: 5),
-              child: iconCercular(
-                  urlImage: urlIcon, color: frestColor, height: 50, width: 4),
-            ),
-            filled: true,
-            fillColor: GeryColor,
+        // textInputAction: TextInputAction.done,
+        decoration: InputDecoration(
+          hoverColor: Colors.black,
+          suffixIcon: Padding(
+            padding:
+                const EdgeInsets.only(right: 5, bottom: 5, top: 5, left: 5),
+            child: iconCercular(
+                urlImage: urlIcon, color: frestColor, height: 30, width: 30),
+          ),
+          filled: true,
+          fillColor: GeryColor,
 
-            // contentPadding: EdgeInsets.all(0),
-            contentPadding: EdgeInsets.only(bottom: 30, left: 20),
+          // contentPadding: EdgeInsets.all(0),
+          contentPadding: EdgeInsets.only(bottom: 30, left: 20),
 
-            hintText: hintText,
-            hintStyle:
-                TextStyle(color: Colors.black45, fontSize: 28, height: 2.2),
-            disabledBorder: InputBorder.none,
-            border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(borderRadius),
-                borderSide: BorderSide(color: Colors.white)),
-          )),
-    );
+          hintText: hintText,
+          hintStyle: TextStyle(
+            color: Colors.black45,
+            fontSize: 22,
+            height: 2.8,
+            fontFamily: 'Gilroy',
+          ),
+          disabledBorder: InputBorder.none,
+          border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(borderRadius),
+              borderSide: BorderSide(color: Colors.white)),
+        ));
 
 Widget passWordField({
   required TextEditingController controller,
@@ -317,7 +334,11 @@ Widget passWordField({
           // contentPadding: EdgeInsets.fromLTRB(20, 20, 20, 10),
 
           hintText: hintText,
-          hintStyle: TextStyle(color: Colors.grey, fontSize: 28),
+          hintStyle: TextStyle(
+            color: Colors.grey,
+            fontSize: 28,
+            fontFamily: 'Gilroy',
+          ),
           disabledBorder: InputBorder.none,
           border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(borderRadius),
@@ -361,10 +382,11 @@ Widget iconCrecolarText({
         SizedBox(
           height: 5,
         ),
-        Text(
-          text,
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
-        )
+        textMots(
+            text: text,
+            size: 20,
+            fontwight: FontWeight.w500,
+            color: HexColor('#4D4D4D')),
       ],
     );
 
@@ -405,12 +427,10 @@ Widget cardsVille() => Container(
               Padding(
                 padding:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                child: Text(
-                  'Marseille',
-                  style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.normal,
-                      color: Colors.white),
+                child: textMots(
+                  text: 'Marseille',
+                  size: 30,
+                  fontwight: FontWeight.normal,
                 ),
               ),
             ],
@@ -593,6 +613,7 @@ Widget smallTicktes(contaxt) => InkWell(
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  
                   Text(
                     'Departure',
                     style: TextStyle(
@@ -670,3 +691,15 @@ Widget smallTicktes(contaxt) => InkWell(
         ),
       ),
     );
+
+Widget textMots({
+  required String text,
+  required double size,
+  Color color = Colors.white,
+  FontWeight fontwight = FontWeight.bold,
+}) =>
+    Text(text,
+        style: GoogleFonts.montserrat(
+          textStyle:
+              TextStyle(fontSize: size, color: color, fontWeight: fontwight),
+        ));

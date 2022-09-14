@@ -15,7 +15,7 @@ class YourTicket extends StatelessWidget {
       height: double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('asset/images/Loding_Page_1.png'),
+          image: AssetImage('asset/images/Loding_Page_k.png'),
           fit: BoxFit.cover,
         ),
       ),

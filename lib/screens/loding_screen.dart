@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:zaad_tickets/screens/login.dart';
 import 'package:zaad_tickets/shard/components/components.dart';
@@ -58,11 +59,10 @@ class _LodingScreenState extends State<LodingScreen> {
               ),
               Center(
                 child: Container(
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 70.0, right: 50),
-                    child: Text(
-                      'The Perfect Solution ',
-                      style: TextStyle(
+                  child: Text(
+                    'The Perfect Solution ',
+                    style: GoogleFonts.montserrat(
+                      textStyle: TextStyle(
                           color: Colors.white,
                           fontSize: 30,
                           fontWeight: FontWeight.w500),
@@ -72,11 +72,10 @@ class _LodingScreenState extends State<LodingScreen> {
               ),
               Center(
                 child: Container(
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 70.0, right: 50),
-                    child: Text(
-                      ' For Online Booking',
-                      style: TextStyle(
+                  child: Text(
+                    ' For Online Booking',
+                    style: GoogleFonts.montserrat(
+                      textStyle: TextStyle(
                           color: Colors.white,
                           fontSize: 30,
                           fontWeight: FontWeight.w500),

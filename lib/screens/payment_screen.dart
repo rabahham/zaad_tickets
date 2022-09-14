@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:zaad_tickets/screens/your_ticket.dart';
 import 'package:zaad_tickets/shard/components/components.dart';
 import 'package:zaad_tickets/shard/style/colors.dart';
 
@@ -24,7 +25,7 @@ class PaymentScreen extends StatelessWidget {
         body: Column(
           children: [
             SizedBox(
-              height: 30,
+              height: 20,
             ),
             Container(
               padding: EdgeInsets.only(left: 20),
@@ -39,33 +40,33 @@ class PaymentScreen extends StatelessWidget {
                         height: 20,
                       ),
                       Text(
-                        ' Let’s Book',
+                        ' Let’s Book YourTrip',
                         style: TextStyle(
-                            fontSize: 38,
+                            fontSize: 34,
                             color: Colors.white,
-                            fontWeight: FontWeight.bold),
+                            fontWeight: FontWeight.w500),
                       ),
-                      Text(
-                        ' YourTrip',
-                        style: TextStyle(
-                            fontSize: 38,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold),
-                      ),
+                      // Text(
+                      //   ' YourTrip',
+                      //   style: TextStyle(
+                      //       fontSize: 34,
+                      //       color: Colors.white,
+                      //       fontWeight: FontWeight.w500),
+                      // ),
                     ],
                   ),
                   SizedBox(
-                    width: 120,
+                    width: 10,
                   ),
                   Column(
                     children: [
                       SizedBox(
-                        height: 30,
+                        height: 25,
                       ),
                       InkWell(
                         child: iconCercular(
-                            width: 55,
-                            height: 55,
+                            width: 50,
+                            height: 50,
                             urlImage: 'asset/images/prson_s_icon.png',
                             color: selectedIcon),
                       ),
@@ -75,11 +76,11 @@ class PaymentScreen extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 30,
             ),
             Container(
               width: double.infinity,
-              height: 430,
+              height: 480,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.all(
@@ -339,33 +340,79 @@ class PaymentScreen extends StatelessWidget {
                     ],
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 50),
+                    padding: EdgeInsets.symmetric(horizontal: 40),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         dropDownCustum(url: 'asset/images/user.png'),
+                        Spacer(),
                         dropDownCustum(url: 'asset/images/Group 2.png'),
+                        Spacer(),
                         dropDownCustum(url: 'asset/images/child-head.png'),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 40),
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Container(
+                          height: 38,
+                          width: 95,
+                          margin: EdgeInsets.all(7),
+                          padding: EdgeInsets.all(7),
+                          decoration: BoxDecoration(
+                            border: Border.all(width: 1.0, color: frestColor),
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: Image.asset(
+                            'asset/images/GB.png',
+                          ),
+                        ),
+                        Spacer(),
+                        Container(
+                          height: 38,
+                          width: 95,
+                          margin: EdgeInsets.all(7),
+                          padding: EdgeInsets.all(7),
+                          decoration: BoxDecoration(
+                            border: Border.all(width: 1.0, color: frestColor),
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: Image.asset(
+                            'asset/images/Dahabiai.png',
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
                       ],
                     ),
                   ),
                 ],
               ),
             ),
-            Expanded(
-              child: Container(
-                width: double.infinity,
-                color: Colors.white,
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Padding(
-                  padding: const EdgeInsets.all(22.0),
-                  child: defultButton(
-                    text: 'Book Now',
-                    function: () {},
-                    background: SecndColors,
-                  ),
-                ),
+            Spacer(),
+            Container(
+              width: double.infinity,
+              color: Colors.white,
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: defultButton(
+                text: 'Book Now',
+                function: () {
+                  navigatTo(context, YourTicket());
+                },
+                background: SecndColors,
               ),
             ),
+            SizedBox(
+              height: 15,
+            )
           ],
         ),
       ),

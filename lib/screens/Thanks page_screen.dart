@@ -37,26 +37,26 @@ class Thanks_screen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: SafeArea(
-          child: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.all(45.0),
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 20,
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 40,
+                ),
+                Container(
+                  width: double.infinity,
+                  height: 60,
+                  child: Image.asset(
+                    'asset/images/logo_z.png',
+                    fit: BoxFit.contain,
                   ),
-                  Container(
-                    width: double.infinity,
-                    height: 60,
-                    child: Image.asset(
-                      'asset/images/logo_z.png',
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 40,
-                  ),
-                  Container(
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                Expanded(
+                  child: Container(
                     width: double.infinity,
                     height: 180,
                     child: Image.asset(
@@ -64,10 +64,12 @@ class Thanks_screen extends StatelessWidget {
                       fit: BoxFit.contain,
                     ),
                   ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  Container(
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Expanded(
+                  child: Container(
                     child: Center(
                         child: Column(
                       children: [
@@ -98,27 +100,27 @@ class Thanks_screen extends StatelessWidget {
                       ],
                     )),
                   ),
-                  // Spacer(),
-                  defultButton(
-                      function: () {
-                        // _formKey.currentState!.validate();
-                        // signIn(emailController.text, passwordController.text);
-                        if (_formKey.currentState!.validate()) {
-                          print(emailController.text);
-                          print(passwordController.text);
-                          navigatTo(context, HomeScreens());
-                          // ZaadTicktsLoginCubit.get(context).userLogin(
-                          //     email: emailController.text,
-                          //     password: passwordController.text);
-                        }
-                      },
-                      text: 'New Ticket',
-                      background: HexColor('#3E8A85')),
-                  SizedBox(
-                    height: 40,
-                  )
-                ],
-              ),
+                ),
+                // Spacer(),
+                defultButton(
+                    function: () {
+                      // _formKey.currentState!.validate();
+                      // signIn(emailController.text, passwordController.text);
+                      if (_formKey.currentState!.validate()) {
+                        print(emailController.text);
+                        print(passwordController.text);
+                        navigatTo(context, HomeScreens());
+                        // ZaadTicktsLoginCubit.get(context).userLogin(
+                        //     email: emailController.text,
+                        //     password: passwordController.text);
+                      }
+                    },
+                    text: 'New Ticket',
+                    background: HexColor('#3E8A85')),
+                SizedBox(
+                  height: 20,
+                )
+              ],
             ),
           ),
         ),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:zaad_tickets/screens/Thanks%20page_screen.dart';
+import 'package:zaad_tickets/screens/thanks%20page_screen.dart';
 import 'package:zaad_tickets/screens/home_screen.dart';
 import 'package:zaad_tickets/shard/components/components.dart';
 

@@ -346,8 +346,8 @@ Widget iconCrecolarText({
     Column(
       children: [
         Container(
-          width: 72,
-          height: 70,
+          width: 67,
+          height: 65,
           decoration: BoxDecoration(
             // color: HexColor('#3C8080'),
             color: color,
@@ -363,7 +363,7 @@ Widget iconCrecolarText({
         ),
         Text(
           text,
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
         )
       ],
     );
@@ -528,31 +528,32 @@ Widget classChecCustum() => Container(
 Widget dropDownCustum({
   required String url,
 }) =>
-    Expanded(
-      child: Container(
-        height: 30,
-        width: 70,
-        margin: EdgeInsets.all(7),
-        padding: EdgeInsets.all(7),
-        decoration: BoxDecoration(
-          border: Border.all(width: 1.0, color: frestColor),
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              url,
-            ),
-            Spacer(),
-            Icon(
+    Container(
+      height: 30,
+      width: 70,
+      margin: EdgeInsets.all(7),
+      padding: EdgeInsets.all(7),
+      decoration: BoxDecoration(
+        border: Border.all(width: 1.0, color: frestColor),
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            url,
+          ),
+          Spacer(),
+          Center(
+            child: Icon(
               Icons.keyboard_arrow_down,
               color: SecndColors,
+
               // size: 30,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
 

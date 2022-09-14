@@ -42,33 +42,33 @@ class Book_Screen extends StatelessWidget {
                         height: 20,
                       ),
                       Text(
-                        ' Let’s Book',
+                        ' Let’s Book YourTrip',
                         style: TextStyle(
-                            fontSize: 38,
+                            fontSize: 34,
                             color: Colors.white,
-                            fontWeight: FontWeight.bold),
+                            fontWeight: FontWeight.w500),
                       ),
-                      Text(
-                        ' YourTrip',
-                        style: TextStyle(
-                            fontSize: 38,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold),
-                      ),
+                      // Text(
+                      //   ' YourTrip',
+                      //   style: TextStyle(
+                      //       fontSize: 34,
+                      //       color: Colors.white,
+                      //       fontWeight: FontWeight.w500),
+                      // ),
                     ],
                   ),
                   SizedBox(
-                    width: 120,
+                    width: 10,
                   ),
                   Column(
                     children: [
                       SizedBox(
-                        height: 30,
+                        height: 25,
                       ),
                       InkWell(
                         child: iconCercular(
-                            width: 55,
-                            height: 55,
+                            width: 50,
+                            height: 50,
                             urlImage: 'asset/images/prson_s_icon.png',
                             color: selectedIcon),
                       ),
@@ -78,7 +78,7 @@ class Book_Screen extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 30,
             ),
             DefaultTabController(
               length: 3,

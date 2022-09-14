@@ -37,6 +37,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   hexcolor: ^2.0.7
+  google_fonts: ^3.0.1
 #   flutter_native_splash: ^2.2.9
 
 # flutter_native_splash:
@@ -88,6 +89,11 @@ flutter:
     - asset/images/user.png
     - asset/images/Group 2.png
     - asset/images/child-head.png
+    - asset/images/GB.png
+    - asset/images/Dahabiai.png
+    - asset/images/Z_green.png
+    - asset/images/time.png
+    - asset/images/date.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -101,10 +107,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: Barcode
+      fonts:
+        - asset: asset/fonts/Libre_Barcode_128/LibreBarcode128-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

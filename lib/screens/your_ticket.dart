@@ -78,7 +78,7 @@ class YourTicket extends StatelessWidget {
           ),
           Container(
             width: double.infinity,
-            height: 480,
+            // height: 486,
             padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -148,20 +148,16 @@ class YourTicket extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            'DZD',
-                            style: TextStyle(
-                                fontSize: 27,
-                                color: selectedIcon,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            ' Algeria',
-                            style: TextStyle(
-                                fontSize: 20,
-                                color: textGrey,
-                                fontWeight: FontWeight.w300),
-                          ),
+                          textMots(
+                              text: 'DZD',
+                              size: 27,
+                              fontwight: FontWeight.bold,
+                              color: selectedIcon),
+                          textMots(
+                              text: ' Algeria',
+                              size: 20,
+                              fontwight: FontWeight.w300,
+                              color: textGrey),
                         ],
                       ),
                     ),
@@ -186,37 +182,31 @@ class YourTicket extends StatelessWidget {
                               ),
                             ],
                           ),
-                          Text(
-                            ' 2H 55Min',
-                            style: TextStyle(
-                                fontSize: 13,
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold),
-                          ),
+                          textMots(
+                              text: ' 2H 55Min',
+                              size: 13,
+                              fontwight: FontWeight.bold,
+                              color: Colors.black),
                         ],
                       ),
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
+                    // SizedBox(
+                    //   width: 10,
+                    // ),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            'MLS',
-                            style: TextStyle(
-                                fontSize: 27,
-                                color: SecndColors,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            ' Marseille',
-                            style: TextStyle(
-                                fontSize: 20,
-                                color: textGrey,
-                                fontWeight: FontWeight.w300),
-                          ),
+                          textMots(
+                              text: 'MLS',
+                              size: 27,
+                              fontwight: FontWeight.bold,
+                              color: SecndColors),
+                          textMots(
+                              text: ' Marseille',
+                              size: 20,
+                              fontwight: FontWeight.w300,
+                              color: textGrey),
                         ],
                       ),
                     )
@@ -301,42 +291,31 @@ class YourTicket extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      SizedBox(
-                        width: 10,
-                      ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            'Departure',
-                            style: TextStyle(
-                                fontSize: 18,
-                                color: textGrey,
-                                fontWeight: FontWeight.w300),
-                          ),
-                          Text(
-                            ' 08:30 AM',
-                            style: TextStyle(
-                                fontSize: 19,
-                                color: colorblue,
-                                fontWeight: FontWeight.bold),
+                          textMots(
+                              text: 'Gate',
+                              size: 18,
+                              color: textGrey,
+                              fontwight: FontWeight.w300),
+                          textMots(
+                            text: ' C1',
+                            size: 19,
+                            color: colorblue,
                           ),
                           SizedBox(
-                            height: 0,
+                            height: 2,
                           ),
-                          Text(
-                            ' Date',
-                            style: TextStyle(
-                                fontSize: 16,
-                                color: textGrey,
-                                fontWeight: FontWeight.w300),
-                          ),
-                          Text(
-                            ' Tue 26 Aug',
-                            style: TextStyle(
-                                fontSize: 18,
-                                color: SecndColors,
-                                fontWeight: FontWeight.bold),
+                          textMots(
+                              text: ' Trip No',
+                              size: 18,
+                              color: textGrey,
+                              fontwight: FontWeight.w300),
+                          textMots(
+                            text: ' ZCVD',
+                            size: 18,
+                            color: SecndColors,
                           ),
                         ],
                       ),
@@ -344,47 +323,39 @@ class YourTicket extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            'Arrive',
-                            style: TextStyle(
-                                fontSize: 18,
-                                color: textGrey,
-                                fontWeight: FontWeight.w300),
-                          ),
-                          Text(
-                            ' 10:30 AM',
-                            style: TextStyle(
-                                fontSize: 19,
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold),
+                          textMots(
+                              text: 'Seat',
+                              size: 18,
+                              color: textGrey,
+                              fontwight: FontWeight.w300),
+                          textMots(
+                            text: ' A1',
+                            size: 19,
+                            color: Colors.black,
                           ),
                           SizedBox(
-                            height: 0,
+                            height: 2,
                           ),
-                          Text(
-                            ' Price',
-                            style: TextStyle(
-                                fontSize: 16,
-                                color: textGrey,
-                                fontWeight: FontWeight.w300),
-                          ),
-                          Text(
-                            ' 27500 DA',
-                            style: TextStyle(
-                                fontSize: 18,
-                                color: selectedIcon,
-                                fontWeight: FontWeight.bold),
+                          textMots(
+                              text: ' Class',
+                              size: 18,
+                              color: textGrey,
+                              fontwight: FontWeight.w300),
+                          textMots(
+                            text: ' Business',
+                            size: 19,
+                            color: selectedIcon,
                           ),
                         ],
                       )
                     ],
                   ),
                 ),
-                SizedBox(height: 50),
+                SizedBox(height: 45),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40.0),
                   child: Divider(
-                    height: 2,
+                    height: 3,
                     color: Color.fromARGB(255, 88, 88, 88),
                   ),
                 ),

@@ -462,13 +462,12 @@ Widget cardsVille() => Container(
     );
 
 Widget selectGates({
-  // Color colorr = selectedIcon,
-
+  required Color colorr,
   String? text,
 }) =>
     Container(
       padding: EdgeInsets.all(10),
-      height: 80,
+      height: 110,
       width: double.infinity,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -476,10 +475,12 @@ Widget selectGates({
       ),
       child: Row(children: [
         Container(
+          margin: EdgeInsets.all(5),
+          padding: EdgeInsets.all(5),
           child: Image.asset(
             'asset/images/icon_velected.png',
-            fit: BoxFit.none,
-            // color: colorr,
+            fit: BoxFit.cover,
+            color: colorr,
           ),
         ),
         SizedBox(
@@ -487,21 +488,14 @@ Widget selectGates({
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'ALG - MLS',
-              style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: HexColor('#6AAAD8')),
-            ),
-            Text(
-              ' Alger Center - Marsille',
-              style: TextStyle(
-                  fontSize: 19,
-                  fontWeight: FontWeight.w400,
-                  color: HexColor('#C0C0C0')),
-            )
+            textMots(text: 'ALG - MLS', size: 30, color: HexColor('#6AAAD8')),
+            textMots(
+                text: ' Alger Center - Marsille',
+                size: 18,
+                color: HexColor('#C0C0C0'),
+                fontwight: FontWeight.w500),
           ],
         )
       ]),
@@ -509,20 +503,20 @@ Widget selectGates({
 
 Widget classCheck() => Expanded(
       child: Container(
-        height: 42,
+        height: 45,
         width: 30,
         margin: EdgeInsets.all(7),
         decoration: BoxDecoration(
-          border: Border.all(width: 3.0, color: frestColor),
+          border: Border.all(width: 1.0, color: frestColor),
           color: Colors.white,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Center(
-          child: Text(
-            'A1',
-            style: TextStyle(
-                fontSize: 24, fontWeight: FontWeight.w500, color: selectedIcon),
-          ),
+          child: textMots(
+              text: 'A1',
+              size: 24,
+              fontwight: FontWeight.w500,
+              color: selectedIcon),
         ),
       ),
     );
@@ -532,7 +526,7 @@ Widget classChecCustum() => Container(
       width: 50,
       // margin: EdgeInsets.all(7),
       decoration: BoxDecoration(
-        border: Border.all(width: 3.0, color: frestColor),
+        border: Border.all(width: 1.0, color: frestColor),
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
       ),
@@ -581,9 +575,9 @@ Widget smallTicktes(contaxt) => InkWell(
       onTap: () => navigatTo(contaxt, PaymentScreen()),
       child: Container(
         color: Colors.white,
-        padding: EdgeInsets.only(bottom: 20, left: 20, right: 20),
+        padding: EdgeInsets.only(bottom: 16, left: 20, right: 20),
         child: Container(
-          height: 125,
+          height: 116,
 
           // padding: EdgeInsets.all(20),
 
@@ -613,37 +607,28 @@ Widget smallTicktes(contaxt) => InkWell(
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  
-                  Text(
-                    'Departure',
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: textGrey,
-                        fontWeight: FontWeight.w300),
-                  ),
-                  Text(
-                    ' 08:30 AM',
-                    style: TextStyle(
-                        fontSize: 19,
-                        color: colorblue,
-                        fontWeight: FontWeight.bold),
+                  textMots(
+                      text: 'Departure',
+                      size: 18,
+                      color: textGrey,
+                      fontwight: FontWeight.w300),
+                  textMots(
+                    text: ' 08:30 AM',
+                    size: 19,
+                    color: colorblue,
                   ),
                   SizedBox(
                     height: 2,
                   ),
-                  Text(
-                    ' Date',
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: textGrey,
-                        fontWeight: FontWeight.w300),
-                  ),
-                  Text(
-                    ' Tue 26 Aug',
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: SecndColors,
-                        fontWeight: FontWeight.bold),
+                  textMots(
+                      text: ' Date',
+                      size: 16,
+                      color: textGrey,
+                      fontwight: FontWeight.w300),
+                  textMots(
+                    text: ' Tue 26 Aug',
+                    size: 18,
+                    color: SecndColors,
                   ),
                 ],
               ),
@@ -653,36 +638,28 @@ Widget smallTicktes(contaxt) => InkWell(
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Arrive',
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: textGrey,
-                        fontWeight: FontWeight.w300),
-                  ),
-                  Text(
-                    ' 10:30 AM',
-                    style: TextStyle(
-                        fontSize: 19,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
+                  textMots(
+                      text: 'Arrive',
+                      size: 18,
+                      color: textGrey,
+                      fontwight: FontWeight.w300),
+                  textMots(
+                    text: ' 10:30 AM',
+                    size: 19,
+                    color: Colors.black,
                   ),
                   SizedBox(
                     height: 2,
                   ),
-                  Text(
-                    ' Price',
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: textGrey,
-                        fontWeight: FontWeight.w300),
-                  ),
-                  Text(
-                    ' 27500 DA',
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: selectedIcon,
-                        fontWeight: FontWeight.bold),
+                  textMots(
+                      text: ' Price',
+                      size: 16,
+                      color: textGrey,
+                      fontwight: FontWeight.w300),
+                  textMots(
+                    text: ' 27500 DA',
+                    size: 19,
+                    color: selectedIcon,
                   ),
                 ],
               )

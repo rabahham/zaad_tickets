@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:zaad_tickets/screens/selected-gate.dart';
 import 'package:zaad_tickets/shard/components/components.dart';
 import 'package:zaad_tickets/shard/style/colors.dart';
 
@@ -70,6 +71,7 @@ class Book_Screen extends StatelessWidget {
                             height: 50,
                             urlImage: 'asset/images/prson_s_icon.png',
                             color: selectedIcon),
+                        onTap: () => navigatTo(context, SelectedGate()),
                       ),
                     ],
                   ),

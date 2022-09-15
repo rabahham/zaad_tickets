@@ -18,7 +18,8 @@ Map<int, Color> color = {
 
 MaterialColor frestColors = MaterialColor(0xFF3E8A85, color);
 Color SecndColors = HexColor('#3C8080');
-Color GeryColor = HexColor('#E1E1E1');
-Color selectedIcon = HexColor('#FF821E');
+Color GeryColor = HexColor('#E1E1E1'); 
+
+ Color  selectedIcon = HexColor('#FF821E');
 Color colorblue = HexColor('#6AAAD8');
 Color textGrey = HexColor('#C0C0C0');

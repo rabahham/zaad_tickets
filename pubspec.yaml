@@ -96,6 +96,7 @@ flutter:
     - asset/images/time.png
     - asset/images/date.png
     - asset/images/Loding_Page_k.png
+    - asset/images/check.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

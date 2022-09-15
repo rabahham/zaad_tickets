@@ -29,13 +29,10 @@ class SelectedGate extends StatelessWidget {
                 children: [
                   SizedBox(height: 40),
                   Center(
-                    child: Text(
-                      'Select Gate',
-                      style: TextStyle(
-                          fontSize: 34,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white),
-                    ),
+                    child: textMots(
+                        text: 'Select Gate',
+                        size: 34,
+                        fontwight: FontWeight.w500),
                   ),
                   SizedBox(
                     height: 30,
@@ -57,7 +54,7 @@ class SelectedGate extends StatelessWidget {
                               classCheck(),
                               classCheck(),
                               SizedBox(
-                                width: 25,
+                                width: 40,
                               ),
                               classCheck(),
                               classCheck(),
@@ -68,7 +65,7 @@ class SelectedGate extends StatelessWidget {
                               classCheck(),
                               classCheck(),
                               SizedBox(
-                                width: 25,
+                                width: 40,
                               ),
                               classCheck(),
                               classCheck(),
@@ -79,7 +76,7 @@ class SelectedGate extends StatelessWidget {
                               classCheck(),
                               classCheck(),
                               SizedBox(
-                                width: 25,
+                                width: 40,
                               ),
                               classCheck(),
                               classCheck(),
@@ -90,7 +87,7 @@ class SelectedGate extends StatelessWidget {
                               classCheck(),
                               classCheck(),
                               SizedBox(
-                                width: 25,
+                                width: 40,
                               ),
                               classCheck(),
                               classCheck(),
@@ -101,7 +98,7 @@ class SelectedGate extends StatelessWidget {
                               classCheck(),
                               classCheck(),
                               SizedBox(
-                                width: 25,
+                                width: 40,
                               ),
                               classCheck(),
                               classCheck(),
@@ -112,7 +109,7 @@ class SelectedGate extends StatelessWidget {
                               classCheck(),
                               classCheck(),
                               SizedBox(
-                                width: 25,
+                                width: 40,
                               ),
                               classCheck(),
                               classCheck(),
@@ -123,14 +120,14 @@ class SelectedGate extends StatelessWidget {
                               classCheck(),
                               classCheck(),
                               SizedBox(
-                                width: 25,
+                                width: 40,
                               ),
                               classCheck(),
                               classCheck(),
                             ],
                           ),
                           SizedBox(
-                            height: 18,
+                            height: 15,
                           ),
                           Padding(
                             padding:
